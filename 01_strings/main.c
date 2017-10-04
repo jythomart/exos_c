@@ -48,15 +48,21 @@ int main(int argc, char **argv) {
     const char *origin = "abcdef";
     const char *empty = "";
 
+    printf("BEGINNING TESTS\n");
+
     // test my_strlen
     assert(my_strlen(origin) == 6);
     assert(my_strlen(empty) == 0);
+
+    printf("33%%: my_strlen is working !\n");
 
     // test my_strcmp
     assert(my_strcmp(origin, "abcdef") == 0);          // s1 and s2 are equal
     assert(my_strcmp(origin, "abcxyz") != 0);          // s1 and s2 are not equal
     assert(my_strcmp(origin, "abcd") == 'e' - '\0');   // s1 is longer than s2
     assert(my_strcmp(empty, origin) == -'a');          // s1 is shorter than s2
+
+    printf("66%%: my_strcmp is working !\n");
 
     // test my_strdup
     // normal string
@@ -71,6 +77,8 @@ int main(int argc, char **argv) {
     assert(*copy == '\0');                          // check the end of string character is present
     assert(my_strcmp(copy, empty) == 0);               // check empty and copy are equal
     free(copy);                                     // free the allocated memory
+
+    printf("100%%: my_strcmp is working !\n");
 
     printf("ALL GOOD ! GG !!!\n");
 
